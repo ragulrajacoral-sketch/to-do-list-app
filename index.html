@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <h1>My To-Do List</h1>
+        <p class="subtitle">Organize your day, one task at a time!</p>
+
+        <form id="taskForm" class="input-section">
+            <label class="sr-only" for="taskInput">New task</label>
+            <input type="text" id="taskInput" placeholder="Enter a new task..." maxlength="200" autocomplete="off">
+            <button type="submit" id="addBtn">Add Task</button>
+        </form>
+
+        <div class="stats" aria-live="polite">
+            <span id="totalTasks">Total: 0</span>
+            <span id="pendingTasks">Pending: 0</span>
+            <span id="completedTasks">Completed: 0</span>
+        </div>
+
+        <ul id="taskList"></ul>
+        <p id="emptyMessage">No tasks yet. Add your first task!</p>
+        <button id="clearBtn" class="clear-btn" type="button">Clear All Tasks</button>
+        <p id="statusMessage" class="sr-only" aria-live="polite"></p>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
